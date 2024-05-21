@@ -1,21 +1,11 @@
-import { useEffect, useState } from "react";
 import { Container } from "./styles";
 
-export function Input(id, labelText, placeholder, ...rest) {
-  const [label, setLabel] = useState("");
-
-  useEffect(() => {
-    setLabel(labelText);
-
-    console.log(labelText)
-  }, [labelText]);
+export function Input({id, labelText, placeholder, ...rest}) {
 
   return(
-    <Container>
-      <div className="input-wrapper" {...rest} >
-        <label htmlFor={id}></label>
-        <input type="text" id={id} placeholder={placeholder} />
-      </div>
+    <Container {...rest}>
+      <label htmlFor={id} className="sr-only" >{labelText}</label>
+      <input type="text" id={id} placeholder={placeholder} />
     </Container>
   );
 };
