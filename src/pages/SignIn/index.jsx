@@ -3,8 +3,6 @@ import {Input} from "../../components/Input";
 import {ButtonText} from "../../components/ButtonText";
 import {Button} from "../../components/Button";
 
-import { Link } from "react-router-dom";
-
 export function SignIn() {
   return(
     <Container>
@@ -12,18 +10,14 @@ export function SignIn() {
 
       <Form>
         <Input id="email" 
-          labelText="Insert your e-mail" 
           placeholder="Insert your e-mail"
         />
         <Input id="password" 
-          labelText="Insert your password" 
           placeholder="Insert your password" 
         />
         
         <Button value="Log In"></Button>
-        <ButtonText value="Sign up"  />
-
-        {/* <Link /> */}
+        <ButtonText value="Sign up" to="/register" />
       </Form>
     </Container>
   );

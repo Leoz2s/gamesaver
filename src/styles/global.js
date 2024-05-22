@@ -17,15 +17,6 @@ export default createGlobalStyle`
     background-color: ${({theme}) => theme.COLORS.BLACK};
   }
 
-  a, button {
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  button:hover, a:hover {
-    filter: brightness(0.9);
-  }
-
   .sr-only {
     position: absolute;
     width: 1px;
@@ -37,4 +28,16 @@ export default createGlobalStyle`
     white-space: nowrap;
     border-width: 0;
   }
+
+  a, button {
+    text-decoration: none;
+    cursor: pointer;
+
+    color: ${({theme}) => theme.COLORS.WHITE};
+  }
+
+  button:hover, a:hover {
+    filter: brightness(0.8);
+  }
+
 `;

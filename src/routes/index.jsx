@@ -1,9 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
-import { SignIn } from "../pages/SignIn";
+import { RouterProvider } from 'react-router-dom';
+import {AppRoutes} from "./app.routes";
+import {AuthRoutes} from "./auth.routes";
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    Element: <SignIn />
-  }
-]);
+export function Routes(){
+  const routes = AppRoutes;
+
+  return(
+    <RouterProvider router={routes} />
+  );
+};
